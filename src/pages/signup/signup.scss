@@ -1,0 +1,88 @@
+page-signup {
+  .pane {
+    width: 100vw;
+    height: 100vh;
+    background: color($colors, primary) !important;
+    color: color($colors, pearl);
+    background-image: -webkit-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -moz-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -ms-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -o-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: linear-gradient(to bottom, color($colors, primary), color($colors, secondary)) !important;
+  }
+  .signup-container {
+    height: 100vh;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo-wrapper {
+      width: 100vw;
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        width: 100%;
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 3.8rem;
+        font-weight: 600;
+      }
+      .testimonial {
+        width: 100%;
+        text-align: center;
+        font-size: 1.36rem;
+      }
+    }
+    .form-wrapper {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .login-form {
+        border: none;
+        background: transparent;
+      }
+      .login-form .item {
+        width: 70vw;
+        border: none;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: 30px !important;
+        color: color($colors, pearl);
+        input {
+          font-size: 1.58rem;
+          text-align: center;
+        }
+        background: rgba(0, 0, 0, 0.320);
+        border-radius: 64px;
+        margin-bottom: 2vh !important;
+      }
+      .login-form .item .item-inner {
+        border: none;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        background: transparent;
+      }
+    }
+    .form-action {
+      flex: 1;
+      .signin-button {
+        color: color($colors, primary);
+        height: 36px;
+      }
+      .signup {
+        margin-top: 2vh;
+        width: 100%;
+        text-align: center;
+        a {
+          color: color($colors, pearl);
+        }
+      }
+    }
+  }
+}

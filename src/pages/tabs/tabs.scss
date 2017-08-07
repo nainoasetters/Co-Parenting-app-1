@@ -1,0 +1,84 @@
+.page-tabs {
+  .tabbar {
+    border-top: transparent !important;
+    border-top: 1px solid color($colors, light) !important;
+    background-color: color($colors, pearl) !important;
+    .tab-button-text {
+      color: color($colors, dark);
+    }
+    height: 46px;
+  }
+  .ion-ios-9chatmessages,
+  .ion-ios-9chatmessages-outline,
+  .ion-md-9chatmessages {
+    content: url(../assets/img/tabs/messages.png);
+    height: 36px !important;
+  }
+  .ion-ios-9chatgroups,
+  .ion-ios-9chatgroups-outline,
+  .ion-md-9chatgroups {
+    content: url(../assets/img/tabs/groups.png);
+    height: 36px !important;
+  }
+  .ion-ios-9chatcontacts,
+  .ion-ios-9chatcontacts-outline,
+  .ion-md-9chatcontacts {
+    content: url(../assets/img/tabs/contacts.png);
+    height: 36px !important;
+  }
+  .ion-ios-9chatpreferences,
+  .ion-ios-9chatpreferences-outline,
+  .ion-md-9chatpreferences {
+    content: url(../assets/img/tabs/preferences.png);
+    height: 36px !important;
+  }
+  .tab-button[aria-selected=true] {
+    .ion-ios-9chatmessages,
+    .ion-ios-9chatmessages-outline,
+    .ion-md-9chatmessages {
+      content: url(../assets/img/tabs/message-text-outline-red.png);
+    }
+    .ion-ios-9chatgroups,
+    .ion-ios-9chatgroups-outline,
+    .ion-md-9chatgroups {
+      content: url(../assets/img/tabs/account-multiple-outline-red.png);
+    }
+    .ion-ios-9chatcontacts,
+    .ion-ios-9chatcontacts-outline,
+    .ion-md-9chatcontacts {
+      content: url(../assets/img/tabs/format-list-bulleted-red.png);
+    }
+    .ion-ios-9chatpreferences,
+    .ion-ios-9chatpreferences-outline,
+    .ion-md-9chatpreferences {
+      content: url(../assets/img/tabs/account-outline-red.png);
+    }
+    .tab-button-text {
+      color: color($colors, primary);
+    }
+  }
+}
+
+.add-button {
+  button {
+    ion-icon {
+      font-size: 2.5rem;
+      font-weight: 500;
+    }
+    background: color($colors, primary) !important;
+    color: color($colors, pearl);
+    background-image: -webkit-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -moz-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -ms-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -o-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: linear-gradient(to bottom, color($colors, primary), color($colors, secondary)) !important;
+  }
+  button:hover {
+    background: color($colors, secondary) !important;
+    background-image: -webkit-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -moz-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -ms-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -o-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: linear-gradient(to bottom, color($colors, secondary), color($colors, primary)) !important;
+  }
+}

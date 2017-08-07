@@ -1,0 +1,100 @@
+page-requests {
+  .contact-list {
+    border: none;
+    padding-bottom: 10vh;
+  }
+  .contact-list .item {
+    border: none;
+    border-bottom: 1px solid color($colors, light) !important;
+    max-height: 30px;
+    height: 26px;
+    ion-avatar {
+      margin: 4px 8px 0 0;
+      width: 30px !important;
+      height: 30px !important;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    h2 {
+      font-size: 1.36rem;
+    }
+    #online {
+      min-height: 6vw !important;
+      height: 6vw !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .online-circle {
+      position: relative;
+      z-index: 100;
+      left: 22px;
+      top: -6px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: color($colors, primary);
+    }
+    .contact-info {
+      button {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        ion-icon {
+          margin: 0 0 0 0;
+          padding: 0 0px 0 10px;
+          font-size: 2.06rem;
+        }
+      }
+    }
+  }
+  .contact-list .list-header {
+    background-color: color($colors, light) !important;
+  }
+  .contact-list .list-header .item-inner {
+    ion-label {
+      text-transform: none !important;
+      color: gray;
+      span {
+        color: color($colors, primary);
+      }
+    }
+  }
+  .contact-list .item:last-child {
+    border: none;
+    max-height: 30px;
+    height: 30px;
+  }
+  .contact-list .item .item-inner {
+    border: none;
+    max-height: 30px;
+    height: 30px;
+  }
+  ion-item-options {
+    border: none !important;
+    border-bottom: 1px solid color($colors, light) !important;
+  }
+  .delete-button {
+    ion-icon {
+      font-size: 2rem;
+    }
+    border: none;
+    font-size: 1.1rem;
+    width: 50px;
+    background: color($colors, primary) !important;
+    color: color($colors, pearl);
+    background-image: -webkit-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -moz-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -ms-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: -o-linear-gradient(top, color($colors, primary), color($colors, secondary)) !important;
+    background-image: linear-gradient(to bottom, color($colors, primary), color($colors, secondary)) !important;
+  }
+  .delete-button:hover {
+    background: color($colors, secondary) !important;
+    background-image: -webkit-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -moz-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -ms-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: -o-linear-gradient(top, color($colors, secondary), color($colors, primary)) !important;
+    background-image: linear-gradient(to bottom, color($colors, secondary), color($colors, primary)) !important;
+  }
+}

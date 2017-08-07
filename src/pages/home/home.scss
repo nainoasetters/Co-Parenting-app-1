@@ -1,0 +1,37 @@
+page-home {
+
+  .avatar
+  {
+    position: absolute;
+    align-items: center;
+
+  }
+  .cardTitle
+  {
+    text-align: center;
+    padding: 15px 10px;
+    color: #222222;
+  }
+  .centerImg{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+  }
+  hr
+  {
+    margin: 5px 30px;
+  }
+  .time
+  {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #222222;
+  }
+
+}
+
