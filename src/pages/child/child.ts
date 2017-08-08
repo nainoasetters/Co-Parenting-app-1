@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Contact } from '../contact/contact';
 /**
  * Generated class for the ChildPage page.
  *
@@ -24,6 +24,7 @@ export class ChildPage {
   add()
   {
     console.log(this.name, ' : ',this.dob);
+    this.navCtrl.setRoot(Contact);
   }
 
 }

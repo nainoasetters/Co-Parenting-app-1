@@ -1,2 +1,18 @@
 page-contact {
+  .horizontalContainer
+  {
+      margin-top: 10px;
+      width: 30em;
+      overflow-x: auto;
+      white-space: nowrap;
+      background-color: white;
+  }
+  .horizontal_avatars
+  {
+    margin-left: 10px;
+  }
+  hr
+  {
+    margin: 5px 30px;
+  }
 }
