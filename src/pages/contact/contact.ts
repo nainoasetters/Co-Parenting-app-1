@@ -23,6 +23,7 @@ export class Contact {
   addRelation(relationType:string){
     if(relationType == 'coParent'){
       this.navCtrl.push(CoparentPage);
+      this.family.coParent = 'abc';
     }
     else if(relationType == 'child'){
       this.navCtrl.push(ChildPage);
