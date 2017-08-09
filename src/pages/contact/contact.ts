@@ -4,9 +4,10 @@ import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 //pages
 import  { CoparentPage } from '../coparent/coparent';
 import  { ChildPage } from '../child/child';
+import { ChildDPage } from '../child-d/child-d';
+import {Database} from "../../providers/database";
 
 //Providers
-import  { Database } from '../../providers/database'
 
 @IonicPage()
 @Component({
@@ -31,7 +32,8 @@ export class Contact {
     else
       console.log('invalid Relation Type');
   }
-  abc(a){
-    console.log("name", a);
+  child_detail(a : string)
+  {
+    this.navCtrl.push(ChildDPage, {name: a});
   }
 }

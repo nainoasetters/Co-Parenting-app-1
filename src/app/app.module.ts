@@ -11,10 +11,9 @@ import { Database } from '../providers/database';
 import { TabsService } from '../providers/tabs.service';
 
 
-
 @NgModule({
   declarations: [
-    NiceChat,
+    NiceChat
   ],
   imports: [
     BrowserModule,

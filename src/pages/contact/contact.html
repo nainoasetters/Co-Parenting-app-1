@@ -5,11 +5,11 @@
 </ion-header>
 <ion-content>
     <div class="horizontalContainer">
-      <button ion-button *ngFor="let i of family.childrens" (click)="abc(i)" clear icon-only>
+      <button ion-button *ngFor="let i of family.childrens" (click)="child_detail(i)" clear icon-only>
         <ion-icon class="horizontal_avatars" name="contact"></ion-icon>
       </button>
 
-      <button ion-button *ngIf="family.coParent != ' '" (click)="abc(family.coParent)" clear icon-only>
+      <button ion-button *ngIf="family.coParent != ' '" clear icon-only>
         <ion-icon class="horizontal_avatars" name="contact"></ion-icon>
       </button>
     </div>
@@ -17,7 +17,7 @@
   <ion-fab center middle>
     <button ion-fab><ion-icon name="add"></ion-icon></button>
     <ion-fab-list side="top">
-      <button ion-fab style="width: 80px;" *ngIf="family.coParent == ' '"    
+      <button ion-fab style="width: 80px;" *ngIf="family.coParent == ' '"
       (click)="addRelation('coParent')">Co-parent</button>
       <button ion-fab style="width: 80px;" (click)="addRelation('child')">Child</button>
     </ion-fab-list>
