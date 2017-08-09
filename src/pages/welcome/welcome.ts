@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import  { AuthProvider } from '../../providers/auth/auth';
+
 
 import { TabsService } from '../../providers/tabs.service';
 /**
@@ -14,8 +16,9 @@ import { TabsService } from '../../providers/tabs.service';
   templateUrl: 'welcome.html',
 })
 export class Welcome {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
+  email: string ="";
+  password: string = "";
+  constructor(private auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
   }
 
   ionViewDidLoad() {
@@ -34,7 +37,13 @@ export class Welcome {
 
   signin() {
     console.log('signin');
-    this.navCtrl.setRoot('TabsPage');
+    this.auth.login(this.email,this.password)
+    .then(data => {
+      this.navCtrl.setRoot('TabsPage');      
+    })
+    .catch(err=>{
+      console.log("Error : ", err.message);
+    })
   }
 
   signup() {
