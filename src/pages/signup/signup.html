@@ -21,19 +21,19 @@
     <div class="form-wrapper">
       <ion-list class="login-form">
         <ion-item>
-          <ion-input type="text" placeholder="First Name"></ion-input>
+          <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" placeholder="Last Name"></ion-input>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="email" placeholder="Your Email"></ion-input>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="Password"></ion-input>
+          <ion-input type="number" step="1" placeholder="Phone Number" [(ngModel)]="number"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="number" step="0.01" placeholder="Phone Number"></ion-input>
+          <ion-input type="Date" placeholder="Date Of Birth" [(ngModel)]="dob"></ion-input>
         </ion-item>
       </ion-list>
     </div>

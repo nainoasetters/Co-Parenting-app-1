@@ -2,6 +2,10 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { NiceChat } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpModule } from '@angular/http';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -9,6 +13,7 @@ import { Camera } from '@ionic-native/camera';
 
 import { Database } from '../providers/database';
 import { TabsService } from '../providers/tabs.service';
+import { AuthProvider } from '../providers/auth/auth';
 
 
 @NgModule({
@@ -37,7 +42,11 @@ import { TabsService } from '../providers/tabs.service';
           tabsHideOnSubPages: true
         }
       }
-    })
+    }),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule, 
+    AngularFireModule.initializeApp(config),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -49,7 +58,8 @@ import { TabsService } from '../providers/tabs.service';
     Camera,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Database,
-    TabsService
+    TabsService,
+    AuthProvider
   ]
 })
 export class AppModule { }
