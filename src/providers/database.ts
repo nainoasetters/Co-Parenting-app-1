@@ -7,7 +7,7 @@ export class Database {
     console.log('Database Provider');
     this.family = [{
     name: "familyName",
-    childrens: ["abc", "def"],
+    childrens: ["John", "Steve"],
     coParent: ' '
   }]
   }
