@@ -1,21 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Contact } from '../contact/contact';
-/**
- * Generated class for the CoparentPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { Http } from '@angular/http';
+
 @IonicPage()
 @Component({
   selector: 'page-coparent',
   templateUrl: 'coparent.html',
 })
 export class CoparentPage {
-
-  name:string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  coParent= {
+  name:'',
+  };
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -23,8 +20,11 @@ export class CoparentPage {
   }
   add()
   {
-    console.log(this.name);
-    this.navCtrl.setRoot(Contact);
+    console.log(this.coParent);
+    this.http.post('/api/create/coParent',this.coParent)
+    .subscribe(data => {
+      console.log("Data:",data);
+    })
   }
 
 

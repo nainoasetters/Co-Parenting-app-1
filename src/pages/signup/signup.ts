@@ -11,14 +11,15 @@ import { Http } from '@angular/http';
   templateUrl: 'signup.html',
 })
 export class Signup {
-  email: string ="";
-  password: string = "";
-  uid:string = "";
-  name: string = "";
-  number: string = "";
-  dob:string ="";
-  user:any;
-  constructor(private http: Http,private db:AngularFireDatabase, private auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
+  user = {
+    email:"",
+    password:"",
+    uid:"",
+    name:"",
+    number:"",
+    dob:""
+  }
+  constructor(private http: Http, private auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
   }
 
   ionViewDidLoad() {
@@ -35,22 +36,12 @@ export class Signup {
     this.events.publish('conversation:unload');
   }
 
-  onSubmit(data){
-    console.log('adasd');
-  }
   // signup method
   signup(data) {
     //autnenticate user user the "Auth provider"
-    this.auth.signup(this.email,this.password)
-    .then(data => {
-      this.user = {
-        uid:data.uid,
-        name: this.name,
-        number:this.number,
-        email:this.email,
-        password:this.password,
-        dob:this.dob
-      }
+    this.auth.signup(this.user.email,this.user.password)
+    .then( data => {
+      this.user.uid = data.uid;
       console.log(this.user);
       // sending user data to the server
       this.http.post("/api/users/create",this.user)

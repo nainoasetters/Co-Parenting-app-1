@@ -7,21 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{name}}'s Bio</ion-title>
+    <ion-title>{{bio.name}}'s Bio</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label floating>Child's name</ion-label>
-    <ion-input type="text" [(ngModel)]="name"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label floating>Date Of Birth</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <button ion-button icon-right> Back<ion-icon name="home"></ion-icon></button>
-  <button ion-button>Save</button>
+	<form (ngSubmit)="saveBio()">
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="bio.name" name="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Date of Birth</ion-label>
+        <ion-input type="text" [(ngModel)]="bio.dob" name="dob"></ion-input>
+      </ion-item>
+      <button ion-button right type="submit">Save</button>
+    </form>
 </ion-content>

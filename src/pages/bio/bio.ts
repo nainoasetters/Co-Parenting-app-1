@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http} from '@angular/http';
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
+
 
 @IonicPage()
 @Component({
@@ -7,13 +10,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'bio.html',
 })
 export class BioPage {
-	name:string="";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	bio = {
+		name:"",
+		dob:""
+	};
+
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams,private formBuilder:FormBuilder) 
+  {
+  	this.bio.name=this.navParams.get('name');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BioPage');
-    this.name=this.navParams.get('name');
+  }
+  backButton(){
+  	this.navCtrl.pop();
+  }
+  saveBio(){
+  	console.log('check:',this.bio);
+  	this.http.post('/api/create/bio',this.bio)
+  	.subscribe(data=>{
+  		console.log("DATA:",data);
+  	})
   }
 
 }

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 
 //pages
 import { CoparentPage } from '../coparent/coparent';
 import { ChildPage } from '../child/child';
 import { ChildDPage } from '../child-d/child-d';
-import { Database } from "../../providers/database";
 
 //Providers
+import { Database } from "../../providers/database";
 
 @IonicPage()
 @Component({
@@ -24,7 +24,6 @@ export class Contact {
   addRelation(relationType:string){
     if(relationType == 'coParent'){
       this.navCtrl.push(CoparentPage);
-      this.family.coParent = 'abc';
     }
     else if(relationType == 'child'){
       this.navCtrl.push(ChildPage);

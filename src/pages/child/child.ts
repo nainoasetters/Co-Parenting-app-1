@@ -1,21 +1,19 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Contact } from '../contact/contact';
-/**
- * Generated class for the ChildPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { Http } from '@angular/http';
+
 @IonicPage()
 @Component({
   selector: 'page-child',
   templateUrl: 'child.html',
 })
 export class ChildPage {
-  name: string;
-  dob : Date;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  child = {
+  name: "",
+  dob : "",
+  }
+  constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -23,7 +21,11 @@ export class ChildPage {
   }
   add()
   {
-    console.log(this.name, ' : ',this.dob);
+    console.log(this.child.name, ' : ',this.child.dob);
+    this.http.post('/api/create/child',this.child)
+    .subscribe(data => {
+      console.log("DATA:",data);
+    })
     this.navCtrl.setRoot(Contact);
   }
 

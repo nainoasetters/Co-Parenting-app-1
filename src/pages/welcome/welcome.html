@@ -12,15 +12,15 @@
       </div>
     </div>
     <div class="form-wrapper">
-      <ion-list class="login-form">
+      <form (ngSubmit)="signin()"  class="login-form">
         <ion-item>
-          <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+          <ion-input placeholder="Email" type="email" [(ngModel)]="user.email" name="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+          <ion-input placeholder="Password" type="password" [(ngModel)]="user.password" name="password"></ion-input>
         </ion-item>
-      </ion-list>
-      <button class="signin-button" ion-button full round color="pearl" (click)="signin()">Sign in</button>
+        <button class="signin-button" ion-button full round color="pearl" type="submit">Sign in</button>
+      </form>
       <div class="signup">
         Do not have account? <a (click)="signup()">Sign up</a>
       </div>
