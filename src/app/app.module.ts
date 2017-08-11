@@ -15,7 +15,15 @@ import { Database } from '../providers/database';
 import { TabsService } from '../providers/tabs.service';
 import { AuthProvider } from '../providers/auth/auth';
 
-
+const config = {
+    apiKey: "AIzaSyDc87Zcqs5hL1o888oqXPUWQ5xIbsuTcFI",
+    authDomain: "co-parenting-f9345.firebaseapp.com",
+    databaseURL: "https://co-parenting-f9345.firebaseio.com",
+    projectId: "co-parenting-f9345",
+    storageBucket: "",
+    messagingSenderId: "308290490035"
+  };
+  
 @NgModule({
   declarations: [
     NiceChat

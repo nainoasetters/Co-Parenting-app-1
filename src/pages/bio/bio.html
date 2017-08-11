@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>bio</ion-title>
+    <ion-title>{{name}}'s Bio</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-item>
+    <ion-label floating>Child's name</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
 
+  <ion-item>
+    <ion-label floating>Date Of Birth</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <button ion-button icon-right> Back<ion-icon name="home"></ion-icon></button>
+  <button ion-button>Save</button>
 </ion-content>

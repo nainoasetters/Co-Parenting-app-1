@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 //pages
-import  { CoparentPage } from '../coparent/coparent';
-import  { ChildPage } from '../child/child';
+import { CoparentPage } from '../coparent/coparent';
+import { ChildPage } from '../child/child';
 import { ChildDPage } from '../child-d/child-d';
-import {Database} from "../../providers/database";
+import { Database } from "../../providers/database";
 
 //Providers
 

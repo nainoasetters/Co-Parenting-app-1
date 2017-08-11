@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { BioPage } from '../bio/bio';
 /**
  * Generated class for the ChildDPage page.
  *
@@ -21,6 +21,9 @@ export class ChildDPage
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChildDPage');
     this.name=this.navParams.get('name');
+  }
+  bio(){
+  	this.navCtrl.push(BioPage,{name:this.name});
   }
 
 }
