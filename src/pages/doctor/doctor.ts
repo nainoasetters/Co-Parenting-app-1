@@ -1,24 +1,32 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
 
-/**
- * Generated class for the DoctorPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 @IonicPage()
 @Component({
   selector: 'page-doctor',
   templateUrl: 'doctor.html',
 })
 export class DoctorPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	doctor = {
+	address:"",
+	memo:"",
+	name:"",
+	phone:""
+	};
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http:Http) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DoctorPage');
   }
+  addDoctor(){
+  	console.log("addDoctor()",this.doctor);
+  	this.http.post('/api/create/doctor',this.doctor)
+  	.subscribe(data => {
+  		console.log("DATA:",data);
+  	})
 
+  }
 }

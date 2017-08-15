@@ -1,16 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {DoctorPage} from "../doctor/doctor";
-import {MedicinePage} from "../medicine/medicine";
-import {OtherPage} from "../other/other";
-import {WellnessPage} from "../wellness/wellness";
+import { DoctorPage } from "../doctor/doctor";
+import { DataPage } from "../data/data";
 
-/**
- * Generated class for the MedicalPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-medical',
@@ -26,21 +18,17 @@ export class MedicalPage {
     console.log('ionViewDidLoad MedicalPage');
     this.name=this.navParams.get('name');
   }
-
   Doctor(){
     this.navCtrl.push(DoctorPage,{name:this.name});
   };
   Medicine(){
-    this.navCtrl.push(MedicinePage,{name:this.name});
+    this.navCtrl.push(DataPage,{name:this.name,pageType:"medicine"});
   };
   Others(){
-    this.navCtrl.push(OtherPage,{name:this.name});
+    this.navCtrl.push(DataPage,{name:this.name,pageType:"others"});
   };
   Wellness()
   {
-    this.navCtrl.push(WellnessPage,{name:this.name});
-
+    this.navCtrl.push(DataPage,{name:this.name,pageType:"wellness"});
   };
-
-
 }
