@@ -1,5 +1,6 @@
 {
   "name": "nicechat",
   "app_id": "e962c902",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {}
 }

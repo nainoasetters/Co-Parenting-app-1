@@ -37,7 +37,7 @@ export class Signup {
   }
 
   // signup method
-  signup(data) {
+  signup() {
     //autnenticate user user the "Auth provider"
     this.auth.signup(this.user.email,this.user.password)
     .then( data => {

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{name}} educations</ion-title>
+	<ion-fab top right>
+	    <button ion-fab (click) = "addEducation()" class="add"><ion-icon name="add"></ion-icon></button>
+	</ion-fab>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card class="edu" *ngFor="let edu of education">
+	  <ion-card-header>
+	  School:{{edu.school}}
+	  </ion-card-header>
+	  <ion-card-content>
+	  Name:{{edu.name}}<br>
+	  Teacher:{{edu.teacher}}<br>
+	  phone:{{edu.phone}}<br>
+	  Email:{{edu.email}}<br>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>
+

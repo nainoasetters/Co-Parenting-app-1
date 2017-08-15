@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Education</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="addEducation()">
+	    <ion-item>
+	      <ion-input type="text" placeholder="School" [(ngModel)]="education.school" name="school"></ion-input>
+	    </ion-item>
+	    <ion-item>
+	      <ion-input type="text" placeholder="Teacher" [(ngModel)]="education.teacher" name="teacher"></ion-input>
+	    </ion-item>
+	    <ion-item>
+	      <ion-input type="text" placeholder="Name" [(ngModel)]="education.name" name="name"></ion-input>
+	    </ion-item>
+	    <ion-item>
+	      <ion-input type="number" step="1" placeholder="Phone Number" [(ngModel)]="education.phone" name="phone"></ion-input>
+	    </ion-item>
+	    <ion-item>
+	      <ion-input type="email" placeholder="Email" [(ngModel)]="education.email" name="email"></ion-input>
+	    </ion-item>
+	      <button class="signin-button" ion-button full round color="pearl" type="submit">Save</button>
+  </form>
+</ion-content>

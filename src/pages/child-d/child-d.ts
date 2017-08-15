@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { BioPage } from '../bio/bio';
-/**
- * Generated class for the ChildDPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { AddeducationPage } from '../addeducation/addeducation';
+
 @IonicPage()
 @Component({
   selector: 'page-child-d',
@@ -24,6 +20,9 @@ export class ChildDPage
   }
   bio(){
   	this.navCtrl.push(BioPage,{name:this.name});
+  }
+  education(){
+    this.navCtrl.push(AddeducationPage,{name:this.name});
   }
 
 }

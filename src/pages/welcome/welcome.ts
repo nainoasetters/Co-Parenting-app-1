@@ -32,6 +32,7 @@ export class Welcome {
 
   signin() {
     console.log('signin');
+    this.navCtrl.setRoot('TabsPage');
     this.auth.login(this.user.email,this.user.password)
     .then(data => {
       this.navCtrl.setRoot('TabsPage');      
