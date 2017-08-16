@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>adddoctor</ion-title>
+	<ion-fab top right>
+	    <button ion-fab (click) = "addDoctor()" class="add"><ion-icon name="add"></ion-icon></button>
+	</ion-fab>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let i of doctor">
+	  <ion-card-header>
+	  Name: {{i.name}}
+	  </ion-card-header>
+	  <ion-card-content>
+	  phone:{{i.phone}}<br>
+	  Address:{{i.address}}<br>
+	  Memo:{{i.memo}}<br>
+	  </ion-card-content>
+	</ion-card>
+</ion-content>

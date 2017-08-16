@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DoctorPage } from "../doctor/doctor";
-import { DataPage } from "../data/data";
+
+import { AdddoctorPage } from "../adddoctor/adddoctor";
+import { MedicinePage } from "../medicine/medicine";
+import { OtherPage } from "../other/other";
+import { WellnessPage } from "../wellness/wellness";
 
 @IonicPage()
 @Component({
@@ -19,16 +22,16 @@ export class MedicalPage {
     this.name=this.navParams.get('name');
   }
   Doctor(){
-    this.navCtrl.push(DoctorPage,{name:this.name});
+    this.navCtrl.push(AdddoctorPage,{name:this.name});
   };
   Medicine(){
-    this.navCtrl.push(DataPage,{name:this.name,pageType:"medicine"});
+    this.navCtrl.push(MedicinePage,{name:this.name,pageType:"medicine"});
   };
   Others(){
-    this.navCtrl.push(DataPage,{name:this.name,pageType:"others"});
+    this.navCtrl.push(OtherPage,{name:this.name,pageType:"others"});
   };
   Wellness()
   {
-    this.navCtrl.push(DataPage,{name:this.name,pageType:"wellness"});
+    this.navCtrl.push(WellnessPage,{name:this.name,pageType:"wellness"});
   };
 }

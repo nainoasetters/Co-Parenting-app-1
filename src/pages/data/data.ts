@@ -29,6 +29,7 @@ export class DataPage {
   		this.http.post('/api/create/medicine',this.data)
   		.subscribe(data => {
   			console.log("DATA: ", data);
+        this.navCtrl.pop();
   		})
   	}
   	else if(this.pageType == 'others')
@@ -36,6 +37,7 @@ export class DataPage {
   		this.http.post('/api/create/other',this.data)
   		.subscribe(data => {
   			console.log("DATA: ", data);
+        this.navCtrl.pop();
   		})
   	}
   	else if(this.pageType == 'wellness')
@@ -43,6 +45,7 @@ export class DataPage {
   		this.http.post('/api/create/wellness',this.data)
   		.subscribe(data => {
   			console.log("DATA: ", data);
+        this.navCtrl.pop();
   		})
   	}
   	else

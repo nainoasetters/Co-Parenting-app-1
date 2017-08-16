@@ -26,6 +26,7 @@ export class DoctorPage {
   	this.http.post('/api/create/doctor',this.doctor)
   	.subscribe(data => {
   		console.log("DATA:",data);
+        this.navCtrl.pop();
   	})
 
   }

@@ -27,6 +27,7 @@ export class EducationPage {
   	this.http.post('/api/education/create',this.education)
   	.subscribe(data => {
   		console.log("DATA:",data);
+        this.navCtrl.pop();
   	})
   	
   }
