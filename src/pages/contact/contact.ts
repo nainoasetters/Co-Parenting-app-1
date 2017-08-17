@@ -35,4 +35,15 @@ export class Contact {
   {
     this.navCtrl.push(ChildDPage, {name: a});
   }
+  Twofunction()
+  {
+    if(this.family.coParent=="") 
+    {
+      this.navCtrl.push(CoparentPage);
+    }
+    else
+    {
+       this.navCtrl.push(ChildPage);   
+    }
+  }
 }

@@ -9,17 +9,13 @@
         <ion-icon class="horizontal_avatars" name="contact"></ion-icon>
       </button>
 
-      <button ion-button *ngIf="family.coParent != ' '" clear icon-only>
+      <button ion-button *ngIf="family.coParent != ''" clear icon-only>
         <ion-icon class="horizontal_avatars" name="contact"></ion-icon>
       </button>
     </div>
     <hr>
   <ion-fab bottom center>
-    <button ion-fab><ion-icon name="add"></ion-icon></button>
-    <ion-fab-list side="top">
-      <button ion-fab style="width: 80px;" *ngIf="family.coParent == ' '"
-      (click)="addRelation('coParent')">Co-parent</button>
-      <button ion-fab style="width: 80px;" (click)="addRelation('child')">Child</button>
-    </ion-fab-list>
+    <button ion-fab (click)="Twofunction()"><ion-icon name="add"></ion-icon></button>
+    
   </ion-fab>
 </ion-content>

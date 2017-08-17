@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 import  { AuthProvider } from '../../providers/auth/auth';
+import { Database } from '../../providers/database';
 import { TabsService } from '../../providers/tabs.service';
 
 @IonicPage()
@@ -13,7 +14,7 @@ export class Welcome {
   email:"",
   password:"",
   };
-  constructor(private auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
+  constructor(private auth: AuthProvider, public navCtrl: NavController, private db: Database,public navParams: NavParams, public tabsService: TabsService, public events: Events) {
   }
 
   ionViewDidLoad() {
@@ -32,9 +33,10 @@ export class Welcome {
 
   signin() {
     console.log('signin');
-    this.navCtrl.setRoot('TabsPage');
+    //this.navCtrl.setRoot('TabsPage');
     this.auth.login(this.user.email,this.user.password)
     .then(data => {
+      this.db.setUID(data.uid);
       this.navCtrl.setRoot('TabsPage');      
     })
     .catch(err=>{

@@ -1,20 +1,22 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>coparent</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
   <form (ngSubmit)="add()">
     <ion-item>
-      <ion-label floating>Name</ion-label>
-      <ion-input type="text" [(ngModel)]="coParent.name" name="name"></ion-input>
+      <ion-label floating>Relation Name</ion-label>
+      <ion-input type="text" [(ngModel)]="coParent.Relation_Name" name="Relation_Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Coparent Uid</ion-label>
+      <ion-input type="text" [(ngModel)]="coParent.coparent_UID" name="coparent_UID"></ion-input>
     </ion-item>
     <div padding>
-      <button ion-button type="submit">add</button>
+      <button ion-button  full round color="pearl" type="submit">add</button>
     </div>
   </form>
 </ion-content>

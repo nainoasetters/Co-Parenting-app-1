@@ -19,6 +19,7 @@ export class Signup {
     number:"",
     dob:""
   }
+  u;
   constructor(private http: Http, private auth: AuthProvider, public navCtrl: NavController, public navParams: NavParams, public tabsService: TabsService, public events: Events) {
   }
 
@@ -43,8 +44,14 @@ export class Signup {
     .then( data => {
       this.user.uid = data.uid;
       console.log(this.user);
+
+      this.u={ uid:this.user.uid,
+      name:this.user.name,
+      email:this.user.email,
+      password:this.user.password}
+
       // sending user data to the server
-      this.http.post("/api/users/create",this.user)
+      this.http.post("http://localhost:3000/api/user/signup",this.u)
       .subscribe(data =>{
         this.navCtrl.setRoot('TabsPage');
         console.log("working");

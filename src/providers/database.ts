@@ -3,13 +3,22 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Database {
   family;
+  uid='';
   constructor() {
     console.log('Database Provider');
     this.family = [{
     name: "familyName",
     childrens: ["John", "Steve"],
-    coParent: ' '
+    coParent: ""
   }]
+  }
+  setUID(a)
+  {
+      this.uid=a;
+  }
+  getUID()
+  {
+      return this.uid;
   }
   getData(){
     return this.family[0];
